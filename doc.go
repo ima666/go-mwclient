@@ -34,7 +34,7 @@ to multiple MediaWiki sites, you must create a Client for each of them.
 go-mwclient offers a few methods for making arbitrary requests to
 the API: Get, GetRaw, Post, and PostRaw (see documentation for the
 methods for details). They all offer the same basic interface: pass a
-params.Values map (from the cgt.name/pkg/go-mwclient/params package),
+params.Values map (from the github.com/ima666/go-mwclient/params package),
 receive a response and an error.
 
 For convenience, go-mwclient offers several methods for making common
@@ -90,4 +90,4 @@ In that case, the error will be the variable mwclient.ErrAPIBusy.
 Other methods than the core ones (i.e., other methods than Get and Post)
 may return other errors.
 */
-package mwclient // import "cgt.name/pkg/go-mwclient"
+package mwclient // import "github.com/ima666/go-mwclient"

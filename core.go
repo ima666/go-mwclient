@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"cgt.name/pkg/go-mwclient/params"
+	"github.com/ima666/go-mwclient/params"
 
 	"github.com/antonholmquist/jason"
 	"github.com/mrjones/oauth"
@@ -21,7 +21,7 @@ import (
 // If you modify this package, please change DefaultUserAgent.
 
 // DefaultUserAgent is the HTTP User-Agent used by default.
-const DefaultUserAgent = "go-mwclient (https://github.com/cgt/go-mwclient)"
+const DefaultUserAgent = "go-mwclient (https://github.com/ima666/go-mwclient)"
 
 type assertType uint8
 
@@ -99,7 +99,7 @@ type sleeper func(d time.Duration)
 // is invalid (as defined by the net/url package), then it will return nil and
 // the error from url.Parse().
 //
-// The userAgent parameter will be joined with the DefaultUserAgent const and
+// The userAgent parameter will be
 // used as HTTP User-Agent. If userAgent is an empty string, DefaultUserAgent
 // will be used by itself as User-Agent. The User-Agent set by New can be
 // overriden by setting the UserAgent field on the returned *Client.
@@ -120,7 +120,7 @@ func New(inURL, userAgent string) (*Client, error) {
 
 	var ua string
 	if userAgent != "" {
-		ua = userAgent + " " + DefaultUserAgent
+		ua = userAgent
 	} else {
 		ua = DefaultUserAgent
 	}

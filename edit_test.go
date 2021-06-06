@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"cgt.name/pkg/go-mwclient/params"
+	"github.com/ima666/go-mwclient/params"
 )
 
 func TestEdit(t *testing.T) {
